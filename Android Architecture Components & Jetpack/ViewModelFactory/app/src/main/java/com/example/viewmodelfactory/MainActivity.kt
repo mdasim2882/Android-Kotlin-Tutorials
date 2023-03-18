@@ -9,9 +9,9 @@ import androidx.lifecycle.ViewModelProvider
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var txtCounter: TextView
+    val txtCounter: TextView
+        get() = findViewById(R.id.textView)
     lateinit var mainViewModel: MainViewModel
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         mainViewModel = ViewModelProvider(this, MainViewModelFactory(10))
             .get(MainViewModel::class.java)
 
-        txtCounter = findViewById(R.id.textView)
         setText()
     }
 
@@ -30,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         mainViewModel.increment()
         setText()
     }
+
 
     fun setText() {
         txtCounter.text = mainViewModel.count.toString()
