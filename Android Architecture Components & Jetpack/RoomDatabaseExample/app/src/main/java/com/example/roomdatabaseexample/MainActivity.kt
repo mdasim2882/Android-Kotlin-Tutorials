@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val contact1 = ContactEntity(0, "John", "9581111112", Date())
-        val contact2 = ContactEntity(0, "Jason", "9581113312",Date())
+        val contact1 = ContactEntity(0, "John", "9581111112", Date(),0)
+        val contact2 = ContactEntity(0, "Jason", "9581113312",Date(),1)
 
-        // Now, both database and database2 will point to same reference "SatabaseContact_Impl@9991"
+        // Now, both database and database2 will point to the same reference "DatabaseContact_Impl@9991"
         // due to synchronize() block with locking mechanism
         database = DatabaseContact.getDatabase(this)
         val database2 = DatabaseContact.getDatabase(this)
