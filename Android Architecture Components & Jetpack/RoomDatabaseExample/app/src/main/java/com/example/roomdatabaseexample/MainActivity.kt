@@ -1,13 +1,10 @@
 package com.example.roomdatabaseexample
 
-import android.database.sqlite.SQLiteQuery
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.room.Room
-import androidx.room.Update
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.util.*
