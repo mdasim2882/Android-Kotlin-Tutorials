@@ -16,7 +16,7 @@ interface QuoteDaoRoom {
     suspend fun addQuotes(quotes: List<Result>)
 
     @Query("SELECT * from quotes")
-    fun getQuotes() : LiveData<List<Result>>
+    suspend fun getQuotes() :List<Result>
 
 
 }

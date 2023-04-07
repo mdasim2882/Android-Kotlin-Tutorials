@@ -5,8 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.mvvmretrofitroom.models.QuoteList
 import com.example.mvvmretrofitroom.repository.QuoteRepository
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+
 
 class MainViewModel(private val quoteRepository: QuoteRepository) : ViewModel() {
 
