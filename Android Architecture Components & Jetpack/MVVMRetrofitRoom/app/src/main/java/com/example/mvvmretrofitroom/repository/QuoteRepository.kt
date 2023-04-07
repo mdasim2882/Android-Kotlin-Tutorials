@@ -13,7 +13,9 @@ class QuoteRepository(private val quoteAPIService: QuoteAPIService) {
     val liveData: LiveData<QuoteList>
         get() = quotesLiveData
 
+    // This function is marked as suspend due to network call
     suspend fun getQuotes(page: Int) {
+        // NETWORK CALL
         val result = quoteAPIService.getQuotes(page)
         if (result?.body() != null) {
             quotesLiveData.postValue(result.body())
