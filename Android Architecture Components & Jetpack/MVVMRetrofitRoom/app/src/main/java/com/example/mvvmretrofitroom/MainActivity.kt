@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.quoteLiveData.observe(this, Observer {
             Toast.makeText(this@MainActivity, it.results.size.toString(), Toast.LENGTH_SHORT).show()
             it.results.forEach { result ->
-            Log.d(TAG, "onCreate: ${result.toString()}")
+            Log.d(TAG, "onCreate: $result")
         }})
 
 
