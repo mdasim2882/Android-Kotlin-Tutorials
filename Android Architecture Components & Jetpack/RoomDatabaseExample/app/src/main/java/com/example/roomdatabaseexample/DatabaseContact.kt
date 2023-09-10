@@ -27,6 +27,7 @@ abstract class DatabaseContact : RoomDatabase() {
             }
         }
 
+        
 
         // @Volatile is used here so that every thread knows that it values has been changed
         @Volatile
