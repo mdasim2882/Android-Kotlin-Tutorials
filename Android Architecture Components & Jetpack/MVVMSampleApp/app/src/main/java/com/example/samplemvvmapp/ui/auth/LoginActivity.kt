@@ -3,7 +3,7 @@ package com.example.samplemvvmapp.ui.auth
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-import android.widget.Toast
+
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.samplemvvmapp.R
@@ -19,7 +19,7 @@ class LoginActivity : AppCompatActivity(), AuthListener {
             DataBindingUtil.setContentView(this, R.layout.activity_login)
         val viewModel = ViewModelProvider(this).get(AuthViewModel::class.java)
         binding.viewmodel = viewModel
-        viewModel.authListener= this
+        viewModel.authListener = this
 
     }
 
